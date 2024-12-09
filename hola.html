@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Proyecto Aula 5IMC</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        header h1{
+            background: linear-gradient(to right, #952f57, #ca668b);
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem;
+            padding: 40px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transition: all 0.5s ease-in-out;
+        }
+
+        .contenedor {
+            display: flex;
+        }
+  
+        .img-1 {
+            float: left;
+        }
+
+        .img-2 {
+            float: right;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav li {
+            background-color: #f0f0f0;
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: "monserrat", sans-serif;
+        }
+
+        nav li a {
+            position: relative;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav li:hover a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            background-color: #e0e0e0;
+            transform: scale(1.05);
+        }
+
+    nav ul ul {
+      display: none;
+      position: absolute;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; 
+      background: #f9f9f9;
+      width: 680px;
+    }
+
+    nav li:hover ul {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    nav li:mouseleave ul {
+    transition-delay: 0.3s;
+    opacity: 0;
+    transform: translateY(-10px);
+    }
+
+    body h1 {
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        font-size: 3rem;
+
+    }
+
+    body ul {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.25rem;
+        text-align: justify;
+
+    }
+
+    body ol {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.25rem;
+        text-align: justify;
+
+    }
+
+    body p {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.25rem;
+        text-align: justify;
+
+    }
+
+    footer {
+    background: linear-gradient(to right, #6C1D45, #952f57);
+    padding: 10px;
+    }
+
+    footer h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: white;
+    }
+
+    footer h2 {
+    text-align: left;
+    margin-bottom: 0px;
+    color: white;
+    }
+
+    footer ul {
+    list-style: none;
+    padding: 0;
+    }
+
+    footer li {
+    margin-bottom: 5px;
+    color: white;
+    }
+
+        </nav>
+
+    </style>
+</head>
+<body>
+    <header>
+
+        <h1>
+          <div class="clearfix">
+            <img class="img-1" src="Fotos/politecnico.webp" alt="" height=175>
+            <img class="img-2" src="Fotos/cecyt7.png" alt="" height=175>
+        </div>
+        
+          Piezas Automotrices Biocompuestas: Reduciendo la huella de Carbono
+        </h1>
+
+    <nav>
+         <ul>
+            <li>
+                <a onclick="toggleMenu()">Menu</a>
+              <ul id="productosMenu">
+                <li><a href="#inicio">Inicio</a><br/>
+                <li><a href="#acerca">Acerca del Proyecto</a></li><br/>
+                <li><a href="#resultados">Resultados</a></li><br/>
+                <li><a href="#referencias">Referencias</a></li><br/>
+              </ul>
+              </li>
+         </ul>
+    </nav>
+    </header>
+
+    <section id="inicio">
+        <h1>Propuesta</h1>
+        <p>Crear alerones de plastico de un automovil utilizando HPDE, LDPE y PP.</p>
+        <h1>Objetivo</h1>
+        <p>Crear alerones automotrices utilizando plástico como el HDPE, LDPE y PP, mezclando con compuesto químico. Para reducir la propagación de Dióxido de Carbono al medio ambiente.</p>
+    </section>
+
+    <section id="acerca">
+        <h1>Acerca del Proyecto</h1>
+
+        <h1>Justificacion</h1>
+        <p>La producción de alerones en la industria automotriz tiene un impacto ambiental considerable, debido a factores como el tipo de materiales utilizados, los residuos generados y las emisiones en los procesos de manufactura y transporte. Las marcas automotrices, especialmente aquellas que producen vehículos deportivos o de alto rendimiento, suelen emplear materiales avanzados como fibra de carbono, plásticos reforzados y otros compuestos que permiten reducir el peso y mejorar la aerodinámica. Materiales como la fibra de carbono y otros compuestos generan hasta un 30% de la huella de carbono de algunos vehículos deportivos debido a su alto consumo energético y emisiones de CO₂ en producción.</br></br>
+
+        Además, estos materiales son difíciles de reciclar: solo cerca del 10% puede ser recuperado, generando una gran cantidad de residuos industriales</br>
+
+        Porsche, entre otras marcas, busca reducir su impacto ambiental usando energía renovable y mejorando la eficiencia en sus plantas.</br></br>
+
+        Estudios recientes indican que la producción de un automóvil puede contribuir entre el 10% y el 40% de sus emisiones totales a lo largo de su ciclo de vida, siendo el resto generado durante su uso. Este dato resalta una problemática poco atendida en el sector, lo que motiva nuestro interés en abordarla. Sin embargo, no somos pioneros en esta iniciativa; empresas como Ford y Toyota han adoptado la creación sustentable, lo que nos brinda esperanza de que este objetivo es alcanzable y apenas estamos comenzando.</p>
+
+        <div style="text-align: center;">
+          <img src="Fotos/Ford1.png" alt="Ford pionero en usar plastico reciclado"><br/>
+          <img src="Fotos/Toyota1.png" alt="Revolución en plastico ecologico">
+        </div>
+
+        <h1>MATERIALES PIEZA</h1>
+        <p>El plástico ABS es uno de los materiales más comunes debido a su bajo costo y facilidad de moldeado. Los alerones de ABS son livianos, resistentes y adecuados para la producción en masa, lo que los convierte en una opción popular para muchos modelos de carros.</br></br>
+        Los plásticos ABS están compuestos por Acrilonitrilo butadieno estireno, en forma de semielaborados estándar para mecanizado, extruidos en planchas y barras. El polímero ABS es un terpolímero amorfo que se fabrica combinando tres compuestos distintos
+        ABS (Acrilonitrilo Butadieno Estireno) y HDPE (Polietileno de Alta Densidad) son dos tipos de plásticos ampliamente utilizados en diversas industrias debido a sus propiedades únicas. Sin embargo, cada uno tiene características específicas que los hacen más adecuados para ciertas aplicaciones.</br></br>
+
+        <b>Propiedades del ABS</b></br></br>
+
+        El ABS es conocido por su excelente resistencia al impacto, lo que lo hace ideal para productos que deben soportar golpes y caídas. Ocupado altamente en la fabricación de piezas automotrices y juguetes como legos.</br>
+        Este material es rígido y duradero, lo que le permite mantener su forma y resistir el desgaste a lo largo del tiempo.
+        El ABS es fácil de moldear y procesar, lo que lo hace popular en la fabricación de productos mediante técnicas como la inyección de plástico.</p>
+
+        <div style="text-align: center;">
+          <img src="Fotos/tabla1.png" alt="Propiedades Cualitativas">
+        </div>
+
+        <p><b>Propiedades del HDPE</b></br></br>
+
+        El HDPE es conocido por su alta relación resistencia/densidad, lo que significa que es fuerte y ligero al mismo tiempo. Esto lo hace ideal para aplicaciones como tuberías y contenedores.</br></br>
+        El HDPE tiene una excelente resistencia a una amplia gama de productos químicos, lo que lo hace adecuado para aplicaciones en las que el material estará expuesto a sustancias corrosivas.</br>
+        Este material ofrece buenas propiedades de barrera contra la humedad y los gases, lo que lo hace ideal para envases y embalajes que necesitan proteger su contenido de la humedad y el aire.</p>
+
+        <div style="text-align: center;">
+          <img src="Fotos/tabla2.png" alt="Propiedades Cualitativas">
+        </div>
+
+        <p><b>Reemplazo de ABS con HDPE</b></br></br>
+
+        En algunas aplicaciones, el HDPE puede ser una alternativa viable al ABS, especialmente en aquellas donde se requiere una alta resistencia química y a la humedad. Por ejemplo, en contenedores y envases, así como tuberías y conductos.</br></br>
+
+        <b>Limitaciones del HDPE</b></br></br>
+
+        Sin embargo, hay aplicaciones donde el ABS sigue siendo preferido debido a sus propiedades, como productos que requieren alta resistencia al impacto y alta rigidez.</br></br>
+
+        <b>Plástico:</b> HDPE (polietileno de alta densidad)</br>
+        <b>Nombres comerciales:</b> Marlex, Hostalen, Petrothene</br>
+        <b>Alternativas:</b> PP, PPO</br>
+        <b>Alternativas para impresión 3D:</b> Sinterizado selectivo por láser de polipropileno (PP)</br>
+        <b>Alternativas para CNC:</b> HDPE (Tecafine)</br></br>
+
+        Ligera, resistente y estéticamente atractiva, la fibra de carbono es ampliamente utilizada en carros deportivos y de alta gama. Sin embargo, su elevado costo y proceso de fabricación artesanal lo hacen menos accesible para el uso cotidiano.</br>
+        Es posible unir HDPE (Polietileno de Alta Densidad) y fibra de carbono, el proceso es complejo debido a las diferentes propiedades, esto se puede realizar a través de adhesivos:</br></br>
+        Cianoacrilatos o también conocidos como adhesivos instantáneos o "super glue", son útiles para uniones rápidas y de alta resistencia. Sin embargo, pueden no ser ideales para aplicaciones que requieren flexibilidad.</br></br>
+        Acrílicos Estructurales, adhesivos sumamente fuertes que proporcionan una unión duradera entre HDPE y fibra de carbono.</br></br>
+        Poliuretanos, ofrecen alta resistencia al impacto y buena adhesión, siendo adecuados para aplicaciones donde se requiere cierta flexibilidad.</br></br>
+        Para poder pegarlos es necesario la preparación de la superficie, realizando un desengrasado, lijado, y tratamiento de Superficie, revisando la compatibilidad de materiales y condiciones de uso.</br></br>
+        La unión de HDPE y fibra de carbono puede ser útil en diversas aplicaciones, entre ellas la Industria Automotriz para componentes ligeros y resistentes.</br></br>
+        Unir HDPE y fibra de carbono puede ofrecer ventajas significativas en términos de resistencia y durabilidad, siempre y cuando se utilicen los métodos y adhesivos adecuados.</p>
+
+        <h1>MATERIALES MOLDE</h1>
+
+        <div style="text-align: center;">
+          <img src="Fotos/tabla3.png" alt="Propiedades Cualitativas">
+        </div>
+
+        <p>Para fabricar una pieza de Polietileno de Alta Densidad (HDPE), es crucial elegir un material adecuado para el molde que pueda soportar las condiciones de producción y garantizar la calidad del producto final. Los materiales más recomendables para moldes de inyección de plásticos como el HDPE suelen ser aceros especiales debido a sus propiedades mecánicas y térmicas.</br></br>
+
+        <b>Moldes de Acero.</b></br></br>
+
+        Aceros de Cementación, para superficies duras, acero bajo en carbono que adquieren dureza superficial mediante carburización.</br></br>
+        Aceros para Temple Integral, usados para obtener una estructura homogénea con buenos resultados frente a materiales abrasivos como la fibra de vidrio.</br></br>
+        Acero P20 (DIN 1.2311), este acero es pretemplado y ofrece una excelente maquinabilidad y uniformidad en la dureza. Es ideal para moldes de tamaño medio y grande.</br></br>
+        Acero H13 (DIN 1.2344), alta resistencia al desgaste y a la fatiga térmica, excelente para moldes que tienen que soportar altas temperaturas</br></br>
+        Acero 1.2738, acero pretemplado con adición de níquel, buena maquinabilidad y capacidad de pulido.</br></br>
+
+        <b>Moldes de Silicona</b></br></br>
+
+        La silicona es una opción de garantía para fabricar moldes porque ofrece numerosas ventajas. Se pueden crear fácilmente diseños personalizados mediante el moldeo con silicona. Los propios moldes son muy duraderos, la composición de la silicona la hace muy resistente al calor y el frío, a la exposición a sustancias químicas e incluso a los hongos.</br></br>
+       Los moldes de silicona son flexibles y ligeros, también son más fáciles de retirar una vez que la pieza está completamente formada, es menos probable que se rompan o se astillen tanto el molde como la pieza fabricada.</br></br>
+       La silicona soporta temperaturas de -65 °C a 400 °C, además, puede tener un alargamiento del 700 %, según la formulación, se pueden meter en el horno, congelarlos y estirarlos.</br></br>
+       Pese a que ofrece muchas ventajas, también hay algunas limitaciones, cuesta más que el látex y los cauchos orgánicos (en Amazon un galón de 3,8 litros alcanza los 100 $).</br></br>
+       Aplicación en la creación de prototipos y en la producción para el desarrollo de productos en muchas industrias. Dado que el coste de los moldes es menor que el de los moldes de metal para procesos de fabricación tradicionales como el moldeo por inyección, la fundición en moldes de silicona es ideal para la creación de prototipos de diseños de productos, así como para la producción de unidades beta para sondear el mercado y la respuesta de los consumidores ante un nuevo producto, el moldeo con silicona y la fundición de uretano pueden ser ideales para lotes pequeños de piezas.</br></br>
+
+       <b>Molde de Arena Verde</b></br></br>
+
+       El Polietileno de Alta Densidad (HDPE) no se adhiere fácilmente a los moldes de arena verde. Los moldes de arena verde están compuestos principalmente de arena de sílice y bentonita, y se utilizan comúnmente en la fundición de metales. Debido a la naturaleza no adherente del HDPE y las propiedades de la arena verde, no debería haber problemas significativos de adhesión entre el HDPE y el molde</br></br>
+
+       <b>Molde de Yeso</b></br></br>
+
+       El yeso es un material poroso, lo que significa que puede absorber humedad. Esta característica puede ser útil en ciertos procesos de moldeo, pero también puede requerir un tratamiento adicional para evitar que el molde se degrade con el tiempo.</br></br>
+       El HDPE no se adhiere fácilmente al yeso, lo que facilita la extracción de las piezas moldeadas sin necesidad de agentes desmoldantes adicionales, el Polietileno de alta densidad se procesa a temperaturas entre 180°C y 280°C, que son adecuadas para moldes de yeso, siempre y cuando el yeso esté adecuadamente preparado y reforzado si es necesario.</br></br>
+       Debido a su bajo costo y capacidad para capturar detalles finos, los moldes de yeso son ideales para la creación de prototipos, son adecuados para la producción a pequeña escala.</p>
+
+       <h1>PROCESO</h1>
+
+       <p>Se comenzó con la recolección de pet mediante donaciones como en la ilustración 1 y almacenamiento de botellas de la vida diaria , para conseguir en la fecha corte de fundición de pet mas de 4 kg el 23/11/2024 ilustración 1.2 y 1.3 por lo que se concluyó que la recolección fue exitosa.</p>
+
+       <div style="text-align: center;">
+          <img src="Fotos/proceso1.jpg" alt="Ford pionero en usar plastico reciclado"><br/>
+          <img src="Fotos/proceso2.jpg" alt="Ford pionero en usar plastico reciclado"><br/>
+          <img src="Fotos/proceso3.jpg" alt="Revolución en plastico ecologico">
+        </div>
+
+        <h1>Creación de alerón por Solid Edge.</h1>
+
+        <h2>Teoría sobre alerón</h2>
+
+        <p>Un alerón en un automóvil es un componente aerodinámico que tiene como objetivo principal mejorar la estabilidad y el agarre del vehículo a altas velocidades.</br></br>
+
+        <b>¿Cómo logra esto?</b></br></br>
+
+        Imagina que el aire que rodea un coche en movimiento crea una especie de "levante" que puede hacer que el vehículo pierda tracción, especialmente en la parte trasera. El alerón, al ser una superficie inclinada, genera una fuerza hacia abajo (carga aerodinámica) que contrarresta este efecto, "pegando" el coche al suelo y mejorando así su adherencia.</p>
+
+        <div style="text-align: center;">
+          <img src="Fotos/aleron1.jpg" alt="Ford pionero en usar plastico reciclado">
+        </div>
+
+        <h2>¿Qué efectos tiene un alerón en el automóvil?</h2>
+
+        <ul>
+           <li><strong>Mayor estabilidad:</strong> Al aumentar la carga aerodinámica, el alerón reduce el riesgo de que el coche se deslice o se vuelva inestable a altas velocidades, especialmente en curvas.</li></br>
+           <li><strong>Mejor frenado:</strong> La mayor adherencia permite frenar de manera más efectiva y con mayor control.</li></br>
+           <li><strong>Reducción del levantamiento:</strong> A altas velocidades, los vehículos tienden a elevarse debido a la fuerza del aire. Los alerones contrarrestan este efecto, manteniendo el coche más pegado al suelo y mejorando su estabilidad.</li></br>
+           <li><strong>Mejor aerodinámica:</strong> Los alerones están diseñados para optimizar el flujo de aire alrededor del vehículo, reduciendo la resistencia aerodinámica y mejorando la eficiencia del combustible.</li></br>
+           <li><strong>Estética deportiva:</strong> Además de sus funciones técnicas, los alerones aportan un aspecto más deportivo y agresivo a los automóviles, lo que los hace más atractivos visualmente.</li>
+        </ul>
+
+        <h2>¿Cuándo es necesario un alerón?</h2>
+
+        <ul>
+            <li><strong>Coches deportivos:</strong> Los alerones son especialmente útiles en vehículos de altas prestaciones, donde la estabilidad y el agarre son fundamentales.</li></br>
+            <li><strong>Coches modificados:</strong> Si has realizado modificaciones en tu coche que afectan a su aerodinámica, un alerón puede ayudar a restaurar el equilibrio y mejorar el rendimiento.</li></br>
+            <li><strong>Conducción en circuito:</strong> En pistas de carreras, donde las velocidades son altas y las curvas cerradas, los alerones son prácticamente imprescindibles para garantizar la seguridad y el máximo rendimiento.</li></br>
+            <li><strong>Estética:</strong> Le puede sumar gran estética deportiva a un automóvil haciéndolo ver más agresivo y sport.</li></br>
+        </ul>
+
+        <div style="text-align: center;">
+            <figure>
+               <img src="Fotos/carro1.jpg" alt="Ford pionero en usar plastico reciclado"><br/>
+             <figcaption>Alerones de carreras en un Porsche 911 gt3 Rs</figcaption>
+            </figure>
+            <figure>
+               <img src="Fotos/carro2.jpg" alt="Ford pionero en usar plastico reciclado"><br/>
+               <figcaption>Alerones discretos con poca presencia estética y aerodinamica</figcaption>
+            </figure>
+            <figure>   
+               <img src="Fotos/carro3.jpg" alt="Revolución en plastico ecologico">
+               <figcaption>Alerones con presencia estética y apoyo aerodinámico</figcaption>
+            </figure>   
+        </div>
+
+        <h2>Se continuo con la creación de nuestro alerón en el programa Solid Edge.</h2>
+
+        <div style="text-align: center;">
+          <img src="Fotos/solid1.png" alt="Ford pionero en usar plastico reciclado"><br/>
+          <img src="Fotos/solid2.png" alt="Revolución en plastico ecologico">
+        </div>
+
+        <h2>Por consiguiente un alerón mini a escala lego.</h2>
+
+        <div style="text-align: center;">
+          <img src="Fotos/lego1.jpg" alt="Revolución en plastico ecologico">
+        </div>
+
+        <p>Se realizaron los planos del automóvil Smart Fortwo 2006  donde se ensamblara nuestro alerón para tener medidas exactas y que tuviera una armonía el alerón con el estilo del auto.</p>
+
+        <div style="text-align: center;">
+          <img src="Fotos/plano1.png" alt="Revolución en plastico ecologico"></br>
+          <img src="Fotos/plano2.png" alt="Plano smart 2">
+        </div>
+
+        <h1>CREACION DE PAGINA WEB</h1>
+
+        <p>Con el propósito de informar nuestro procedimiento sobre la creación de nuestro proyecto y facilitar la información de los que se encuentren interesados se fabrico una pagina web por medio de código HTML siendo lo suficientemente completa.</p>
+
+        <h1>Creación del molde a base de cartón reciclado</h1>
+
+        <ol>
+           <li><strong>Para realizar el alerón:</strong> Se tomó como referencia las medidas que se tenían en el archivo de Solid Edge, para que después se pudieran sacar moldes de estas de una manera más fácil en Word, y tomarlas como base.</li></br>
+           <li><strong>Con las plantillas:</strong> Se pasaron a cartón 2 piezas laterales y 2 piezas del centro del alerón.</li></br>
+           <li><strong>Recortar las piezas:</strong> Se recortaron las piezas y se realizaron 5 tiras de cartón de aproximadamente 110 cm x 2.5 cm.</li></br>
+           <li><strong>Pegar las tiras:</strong> Ya que se tenía todo recortado, se pegaron las tiras de 2.5 cm a las tiras de cartón más grandes (110 cm de largo).</li></br>
+           <li><strong>Pegar los anclajes:</strong> Ya pegado eso, se pegaron los anclajes superiores a las tapas laterales con pegamento blanco.</li></br>
+           <li><strong>Reforzar la estructura:</strong> Para tener una mejor resistencia, se reforzó con cinta adhesiva (tape).</li></br>
+        </ol>
+
+        <p>Finalmente así quedo el molde, tomando en cuenta que es un molde de cartón reciclado para contribuir el reciclaje, y reducir los costos de la fabricación del mismo.</p>
+
+        <div style="text-align: center;">
+            <figure>
+                  <img src="Fotos/carton1.jpg" alt="Aleron de carton 1">
+               <figcaption><b>VISTA DELANTERA</b></figcaption>
+            </figure>
+            <figure>
+                  <img src="Fotos/carton2.jpg" alt="Aleron de carton 2">
+               <figcaption><b>VISTA SUPERIOR</b></figcaption>
+            </figure>
+            <figure>
+                  <img src="Fotos/carton3.jpg" alt="Aleron de carton 2">
+               <figcaption><b>VISTA LATERAL</b></figcaption>
+            </figure>
+            <figure>
+                  <img src="Fotos/carton4.jpg" alt="Aleron de carton 2">
+               <figcaption><b>FONDO DEL MOLDE</b></figcaption>
+            </figure>
+        </div>
+
+        <h1>TABLAS COMPARATIVAS</h1>
+
+        <div style="text-align: center;">
+          <img src="Fotos/comparativa1.jpg" alt="Ford pionero en usar plastico reciclado"><br/>
+          <img src="Fotos/comparativa2.jpg" alt="Revolución en plastico ecologico"></br>
+          <img src="Fotos/costos1.png" alt="Revolución en plastico ecologico">
+        </div>
+
+    </section>
+
+    <section id="resultados">
+
+        <h1>Resultados</h1>
+
+        <h2>Justificación de Costos</h2>
+
+        <p>El proceso para la realización de los moldes incluyó diversas etapas cuidadosamente planificadas, comenzando con la adquisición de PET (Polietileno Tereftalato) necesario para garantizar una cantidad suficiente de material uniforme en la fabricación de los moldes.</br></br>
+        Los moldes fueron diseñados utilizando una combinación de materiales reciclados, principalmente cartón, seleccionado por ser una opción económica y viable para reducir los costos de producción. Este cartón fue adquirido en un centro de reciclaje a un costo accesible. Adicionalmente, los materiales complementarios requeridos fueron comprados como insumos regulares en el mercado.</br></br>
+        Posteriormente, se realizaron pruebas para fundir el PET y adaptarlo a los moldes creados. Este proceso tuvo un costo significativamente reducido, ya que se logró obtener PET reciclado sin costo alguno.</br></br>
+        Por otro lado, las pruebas de aerodinámica y diseño se realizaron  (IPN), lo que permitió optimizar recursos y asen Solid Edge para asegurar la viabilidad técnica del proyecto.</p>
+
+        <div style="text-align: center;">
+          <img src="Fotos/costos2.png" alt="Revolución en plastico ecologico">
+        </div>
+
+        <p>El alerón fabricado con materiales reciclados, específicamente utilizando tapas de PET, representa una solución económica y sostenible en comparación con los alerones comerciales disponibles en tiendas automotrices.</p>
+
+        <h2>Costo reducido de materia prima:</h2>
+
+        <ul>
+            <li>En lugar de emplear materiales, se reutilizaron tapas de PET, obtenidas a bajo costo o de manera gratuita gracias a la búsqueda del material entre los integrantes de equipo.</li>
+            <li>Esto permitió reducir significativamente los gastos asociados a la adquisición de materiales a un costo de fabricación en tan solo <b>$140 MXN.</b></li>
+        </ul>
+
+        <h2>Procesos económicos de fabricación:</h2>
+
+        <ul>
+            <li>La elaboración del alerón incluyó métodos accesibles como el fundido y moldeado del PET reciclado, realizados con herramientas básicas y sin necesidad de maquinaria industrial costosa.</li>
+            <li>Además, los moldes fueron creados a partir de cartón reciclado, reduciendo los gastos de producción</li>
+        </ul>
+
+        <h2>Comparación con el mercado:</h2>
+
+        <ul>
+            <li>Los alerones comerciales tienen precios que rondan entre <b>$500</b> y <b>$50,000 MXN</b>, dependiendo de su material y diseño, en gran parte debido a los costos de producción, marca, distribución y comercialización.</li>
+            <li>Al evitar estos costos extra, el alerón reciclado es una alternativa viable para quienes buscan funcionalidad y estética a un precio accesible, sin comprometer el medio ambiente.</li>
+        </ul>
+
+        </section>
+
+    <section id="referencias">
+    <footer>
+      <h1>Referencias</h1>
+      <ul>
+          <li><h2>Autores</h2></li>
+          <li>Almazan Diaz Griselda Nataly<br/>
+              Amezcua Rangel Javier Batista<br/>
+              Aragon Castillo Irving Uzziel<br/>
+              Bautista Barranco Axel<br/>
+              Cortes Pedraza Gabriela<br/>
+              Maravilla Garcia Hanny<br/>
+              Martiez Eligio Antonio<br/>
+              Morales Mejia Jessy</li>
+          <li><h2>Sitios Web</h2></li>
+          <li>Green Car Congress, 2021. Disponible en <a href="https://www.greencarcongress.com/">Green Car Congress</a></li>
+          <li>Porsche Newsroom, 2024. Recuperado de<a href="https://newsroom.porsche.com/en.html">Porsche Newsroom</a></li>
+      </ul>
+    </footer>
+    </section>
+
+    <script src="script.js"></script> </body>
+
+    <script>
+    function toggleMenu() {
+      var menu = document.getElementById("productosMenu");
+      if (menu.style.display === "block") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "block";
+      }
+    }
+    </script>
+
+</html>
